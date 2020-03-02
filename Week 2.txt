@@ -1,0 +1,90 @@
+/////////////////////////////////////////////////////////////////
+//
+// Name: Project 0 Bravo
+// Author: Breanna James (bsjames45@gmail.com)
+// Date: 00/00/0000
+// Description: Series of apex methods to demonstrate
+// basic understanding of coding concepts.
+//
+/////////////////////////////////////////////////////////////////
+
+public class P0B {
+    
+    public static integer nFibonacci (integer n){
+        integer current; 
+        integer twoBefore = 0;
+        integer oneBefore = 1;
+        if (n == 0) {
+           return 0; 
+        } if (n == 1) {
+            return 1;
+        } 
+        for (integer i =2; i<=n; i++){
+            current = twoBefore + oneBefore;   
+            twoBefore = oneBefore;
+            oneBefore = current;
+        }
+       
+        return current;
+        //else 
+          // return n = (n-1) + (n-2);
+    } 
+	
+    public static List<integer> sortArray(List<integer> intList )  {
+       // List<integer> Fred = new List<integer>();
+        
+        integer num;
+        boolean value = false;
+        
+        do{
+        value =false;
+        
+        for(integer i=0; i < intList.size(); i++){
+            if(intList[i] > intList[i+1]){
+                value = true;
+                num = intList[i+1];
+                intList.set(intList[i+1], intList[i]);
+                intList.set(intList[i], num);
+            }
+        }
+                    
+            } while (value);
+        	return intList;
+        
+    }  
+    
+    public static Integer nFactorial( Integer n) {
+        
+        if (n == 0){
+            return 1;
+        }
+       
+        integer result=1;
+        integer current;
+        for(integer i=1; i<=n; i++) {
+            
+             result = result*i;
+           // n=result * i;
+            //current = result * (i-1);
+           // rotate = current *(i-2);
+        }
+        return result;      
+	} 
+    
+    public static Integer[] rotateLeftNTimes(Integer[] array, Integer n) {
+        for (integer i = 0; i <= array.size(); i++){
+            for (integer j = 0; j[i+1]; i++){
+                if (arr[i] >arr[j]){
+                    integer temp = arr[j];
+                    arr[i] = temp;
+                    arr[j] = arr[i];             
+                }
+              return temp;
+            }
+        }
+        
+    }
+    
+    
+    
+}
